@@ -1,0 +1,366 @@
+*, 
+*::before, 
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html{
+    font-family:'Nunito', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+} 
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width:100%;
+    max-width:100%;
+}
+
+.container{
+    width:100%;
+    max-width: 98rem; 
+    margin:0 auto;
+    padding:1.5rem;
+}
+
+header{
+    width:100%;
+    height:5rem;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+.navbar{
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width:2rem;
+    margin:10px;
+}
+
+.side-nav{
+ width:25rem;
+ height:100vh;
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ background-color: white; 
+ position: fixed;
+ top:0;
+ left:-26rem;
+ transition: all 650ms ease-in-out;
+}
+
+.side-nav.active{
+    left:0;
+}
+
+.btn-close{
+    position:absolute;
+    top:0;
+    right:10px;
+}
+
+#side-menu a{
+   padding:20px;
+   font-size: 2rem;
+}
+
+#side-menu a:hover{
+    color: rgba(0,0,0,1);
+}
+
+#side-menu .btn-close{
+    font-size: 4rem;
+    color: pink;
+}
+
+.open-slide{
+    float:left;
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+.open-slide a{
+    color:white;
+}
+
+.main-nav{
+    float:right;
+}
+
+.main-nav li{
+    display: inline-block;
+    list-style: none;
+    padding:10px 20px;
+    color:white;
+    font-size: 1.5rem;
+}
+
+.main-nav a{
+    color:white;
+}
+
+.hide {
+    display:none;
+}
+
+.hero{
+    width:100%; 
+    height:80vh;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url('img/men-s-blue-leather-jacket-and-brown-backpack-868097.jpg') no-repeat center;
+    background-size: cover;
+    position:relative;
+}
+
+.hero::before{
+    content: '';
+    position:absolute;
+    left:0;
+    bottom:-3px;
+    width:100%;
+    height:4.7rem;
+    background: url('img/wave-small.png') center no-repeat;
+    background-size: cover;
+}
+
+.main-message{
+    width:100%;
+    max-width: 50rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    transform: translateY(70%);
+}
+
+.main-message h3{
+    font-size:1.6rem;
+}
+
+.main-message h1{
+    font-family: 'Aldrich', sans-serif;
+    font-size:4rem;
+    margin:1rem 0;
+}
+
+.main-message p{
+    text-transform: lowercase;
+    font-size: 1.5rem;
+}
+
+.btn{
+    background-color: #eb648c;
+    border-radius: 2rem;
+    color:#fafafa;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    border: 2px solid rgba(0,0,0,0);
+    transition: all 350ms;
+}
+
+.btn:hover{
+    background-color: rgba(0,0,0,0);
+    border:2px solid white;
+
+}
+
+.experience-outdoors{
+    padding:0;
+}
+
+.title-heading{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+}
+
+.title-heading h3{
+    font-size: 1.4rem;
+}
+
+.title-heading h1{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 2rem;
+    margin: .5rem 0 1rem;
+}
+
+.title-heading p{
+    text-transform: lowercase;
+    font-size:1.5rem
+}
+
+.activities-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.activities-grid-item{
+    height:40rem; 
+    padding:5rem;
+    color:#fafafa; 
+    position:relative;
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    cursor:pointer; 
+    z-index: 1;
+}
+
+.activities-grid-item::before{
+    content: '';
+    position:absolute;
+    top:-3px;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%);
+    z-index: -1;
+}
+
+.star-gazing{
+    background: url('img/stars.jpg') center no-repeat;
+}
+
+.hiking{
+    background: url('img/hiking.jpg') center no-repeat;
+}
+
+.camping{
+    background: url('img/camping.jpg') center no-repeat;
+}
+
+.activities-grid-item .fas{
+    font-size: 4rem;
+    color: #eb648c;
+}
+
+.activities-grid-item h1{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin:2rem 0;
+}
+
+.activities-grid-item p{
+    font-size: 1.5rem;
+}
+
+.testimonials{
+    width:100%;
+    height:80vh;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url('img/testimonials-bg.jpg') no-repeat center fixed;
+    background-size: cover;
+    position:relative;
+}
+
+.testimonials::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4.7rem;
+    background: url('img/wave-small-reversed.png') center no-repeat;
+    background-size: cover;
+}
+
+.testimonial{
+    width:100%;
+    color: #fafafa;
+    font-size: 2rem;
+    position: absolute;
+    top:55%;
+    left:50%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.testimonial-text-box{
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    position:relative;
+}
+
+.testimonial-text-box .fas{
+    position: absolute;
+    top:-7rem; 
+    left:50%; 
+    transform: translateX(-50%);
+    font-size: 5rem;
+    color: #eb648c;
+    opacity: .7;
+    z-index: -1;
+}
+
+.testimonial-customer img{
+    width:10rem;
+    border-radius: 100%;
+    border: 3px solid #eb648c;
+    padding:10px;
+}
+
+.adventure-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.adventure-grid-item p{
+    font-size: 1.5rem;
+}
+
+footer{
+    padding:2.5rem 0;
+    text-align: center;
+    background: #d7d4ed; 
+    color:rgba(0,0,0,.7);
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 470px) {
+    .hero::before{
+        height:9.4rem;
+        background: url('img/wave-medium.png');
+        background-size: cover;
+    }
+
+    .testimonials::before{
+        height:9.4rem;
+        background: url('img/wave-medium-reversed.png');
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    header{
+        height:8rem;
+    }
+
+    .logo{
+        width:3.5rem;
+    }
+
+    .hidden{
+        display:none;
+    }
+
+    .hide{
+        display:block;
+    }
+}
